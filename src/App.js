@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import React, { useEffect, useState } from 'react'
 
 function App() {
+  /* const apiUrl='https://api.nasa.gov/planetary/apod?api_key=jhJByMUpDjKPcKcfPUgZ6QoIdjbbsmmbv8GMf7b4'
+
+  const [imageOfDay, setImageOfDay] = useState([])
+
+  useEffect(() => {
+    const fetchApi= async ()=>{
+      const response= await fetch(apiUrl);
+      setImageOfDay(...imageOfDay,await response.json())
+      
+    }
+
+    fetchApi()
+  }, [])
+  
+  console.log(imageOfDay) */
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar />
+    <Home />
+    </>
   );
 }
 
